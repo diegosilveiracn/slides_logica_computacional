@@ -358,5 +358,169 @@ Ler-se $((p \wedge q) \vee r) \rightarrow s$, como:\\
 \end{exampleblock}
 \end{frame}
 
+\section{Construção de Tabelas-verdade}
+
+\begin{frame}
+\frametitle{Proposição Composta}
+
+Dadas várias proposições simples $p, q,r, . . .$, podemos combiná-las pelos operadores lógicos \structure{$\wedge, \vee, \rightarrow, \leftrightarrow$} e construir proposições compostas:\vfill
+
+\begin{itemize}
+	\item Então, com o emprego das tabelas-verdade das operações lógicas fundamentais já estudadas: \structure{$\neg p, p \wedge q, p \vee q, p \rightarrow q$} e \structure{$p \leftrightarrow q$};
+	\item É possível construir a tabela-verdade correspondente a qualquer proposição composta; e
+	\item A tabela-verdade exibirá exatamente os casos em que a proposição composta será \structure{verdadeira $(V)$} ou \structure{falsa $(F)$}, admitindo-se que o seu valor lógico só depende dos valores lógicos das proposições simples.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ordem de Precedência dos Operadores}
+
+\begin{enumerate}
+	\item Percorra a expressão da esquerda para a direita, executando as operações de \structure{negação}, na ordem em que aparecerem;
+	\item Percorra novamente a expressão, da esquerda para a direita, executando as operações de \structure{conjunção} e \structure{disjunção}, na ordem em que aparecerem;
+	\item Percorra outra vez a expressão, da esquerda para a direita, executando desta vez as operações de \structure{condicionamento}, na ordem em que aparecerem; e
+	\item Percorra uma última vez a expressão, da esquerda para a direita, executando as operações de \structure{bicondicionamento}, na ordem em que aparecerem.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Construindo a Tabela-verdade (Passo 1)}
+
+\begin{exampleblock}{Proposição}
+$\neg (p \wedge \neg q)$
+\end{exampleblock}\vfill
+
+\begin{itemize}
+	\item Forma-se, em primeiro lugar, o par de colunas correspondentes às duas proposições simples $p$ e $q$; e
+	\item \structure{O total de linhas é igual a $2^{n}$, onde $n$ corresponde ao número de proposições simples.}
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo}
+\center
+\begin{tabular}{|c|c|}
+	\hline
+	$p$ & $q$ \\ \hline
+	V & V  \\ \hline
+	V & F  \\ \hline
+	F & V  \\ \hline
+	F & F  \\ \hline
+\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Construindo a Tabela-verdade (Passo 2)}
+
+\begin{itemize}
+	\item Em seguida, forma-se a coluna para $\neg q$.
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\center
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$p$ & $q$ & $\neg q$ \\ \hline
+		V & V  & F \\ \hline
+		V & F  & V \\ \hline
+		F & V  & F \\ \hline
+		F & F  & V \\ \hline
+	\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Construindo a Tabela-verdade (Passo 3)}
+
+\begin{itemize}
+	\item Depois, forma-se a coluna para $p \wedge \neg q$.
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\center
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$p$ & $q$ & $\neg q$  &  $p \wedge \neg q$ \\ \hline
+		V & V  & F & F\\ \hline
+		V & F  & V & V\\ \hline
+		F & V  & F & F\\ \hline
+		F & F  & V & F\\ \hline
+	\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Construindo a Tabela-verdade (Passo 4)}
+
+\begin{itemize}
+	\item Por fim, forma-se a coluna relativa aos valores lógicos da proposição composta $\neg (p \wedge \neg q)$.
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\center
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		$p$ & $q$ & $\neg q$  &  $p \wedge \neg q$ & $\neg (p \wedge \neg q)$\\ \hline
+		V & V  & F & F & V\\ \hline
+		V & F  & V & V & F\\ \hline
+		F & V  & F & F & V\\ \hline
+		F & F  & V & F& V\\ \hline
+	\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tautologia}
+
+\begin{block}{Definição}
+Tautologia é toda proposição composta $P(p, q,r, . . .)$ cujo valor lógico é sempre verdadeiro, quaisquer que sejam os valores lógicos das proposições
+simples $p, q,r, . . .$.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo: $\neg (p \wedge \neg p)$}
+	\center
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$p$ & $\neg p$ &  $p \wedge \neg p$ & $\neg (p \wedge \neg p)$\\ \hline
+		V & F  & F & V \\ \hline
+		F & V  & F & V \\ \hline
+	\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Contradição}
+
+\begin{block}{Definição}
+Contradição é toda proposição composta $P(p, q,r, . . .)$ cujo valor lógico é sempre falso, quais quer que sejam os valores lógicos das proposições simples $p, q,r, . . .$
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo: $p \leftrightarrow \neg p$}
+	\center
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$p$ & $\neg p$ &  $p \leftrightarrow \neg p$\\ \hline
+		V & F  & F \\ \hline
+		F & V  & F \\ \hline
+	\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Contingência}
+
+\begin{block}{Definição}
+Contingencia é toda a proposição composta que não é tautologia nem contradição.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo: $p \rightarrow \neg p$}
+	\center
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$p$ & $\neg p$ &  $p \rightarrow \neg p$\\ \hline
+		V & F  & F \\ \hline
+		F & V  & V \\ \hline
+	\end{tabular}
+\end{exampleblock}
+\end{frame}
 
 \end{document}
