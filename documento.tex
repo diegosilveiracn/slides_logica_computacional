@@ -174,31 +174,189 @@ As partes dessas proposições não são proposições mais simples, mas sim, co
 		\item Se -- então (Condicional), \structure{$\rightarrow$};e
 		\item Se e somente se (Bicondicional), \structure{$\leftrightarrow$}.
 	\end{itemize}
-\end{itemize} \vfill
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operador de Negação}
+
+A característica peculiar da negação, tal como ela se apresenta na lógica proposicional clássica, é que toda proposição submetida à operação de negação resulta na sua contraditória. \vfill
 
 \begin{exampleblock}{Exemplos}
-\structure{Não} está chovendo\\
-Está chovendo \structure{e} está ventando\\
-Está chovendo \structure{ou} está nublado\\
-\structure{Se} choveu, \structure{então} está molhado\\
-Aprenderá \structure{se e somente se} estudar
+$p =$ Está chovendo.\\
+Ler-se $\neg p$, como: ``\structure{Não} está chovendo''.
 \end{exampleblock}
 \end{frame}
 
 \begin{frame}
-\frametitle{Operador de Negação: $\neg$}
+\frametitle{Tabela-verdade para Negação}
 
-A característica peculiar da negação, tal como ela se apresenta na lógica proposicional clássica, é que toda proposição submetida à operação de negação resulta na sua contraditória.
-\vfill
+\begin{itemize}
+	\item Se $p$ é uma proposição, a expressão $\neg p$ é chamada negação de $p$; e
+	\item Claramente, a negação inverte o valor verdade de uma expressão.
+\end{itemize} \vfill
 
 \begin{exampleblock}{Exemplos}
-p = Está chovendo.\\
-Ler-se $\neg p$, como: ``Não está chovendo''.
-\end{exampleblock}\vfill
-
-\begin{alertblock}{Importante}
-O fato expresso por uma proposição não pode ocorrer ao mesmo tempo e sob o mesmo modo e circunstância que o fato expresso pela negação dessa mesma proposição.
-\end{alertblock}
+\center
+\begin{tabular}{|c|c|}
+\hline
+\textbf{p} & \textbf{$\neg$p}\\ \hline
+V & F \\ \hline
+F & V \\ \hline
+\end{tabular}
+\end{exampleblock}
 \end{frame}
+
+\begin{frame}
+\frametitle{Operador de Conjunção}
+
+A característica peculiar da conjunção está no fato de fórmulas conjuntivas expressarem a concomitância de fatos. A fórmula $(p \wedge q)$ expressa que o
+fato expresso por $p$ ocorre ao mesmo tempo que o fato expresso por $q$. \vfill
+
+\begin{exampleblock}{Exemplos}
+$p =$ Está chovendo.\\
+$q =$ Está ventando.\\
+Ler-se $p \wedge q$, como: ``Está chovendo \structure{e} está ventando.''
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tabela-verdade para Conjunção}
+
+\begin{itemize}
+\item Se $p$ e $q$ são proposições, a expressão $p \wedge q$ é chamada conjunção de $p$ e $q$; e
+\item As proposições $p$ e $q$ são chamadas fatores da expressão.
+\end{itemize} \vfill
+
+\begin{exampleblock}{Exemplos}
+\center
+\begin{tabular}{|c|c|c|}
+	\hline
+	\textbf{p} & \textbf{q} & \textbf{p $\wedge$ q}\\ \hline
+	V & V & V \\ \hline
+	V & F & F \\ \hline
+	F & V & F \\ \hline
+	F & F & F \\ \hline
+\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operador de Disjunção}
+
+A característica peculiar da disjunção consiste no fato de proposições disjuntivas expressarem que pelo menos um de dois fatos ocorre. A fórmula $(p \vee q)$ expressa que, dentre os fatos expressos por $p$ e $q$ respectivamente,
+pelo menos um deles ocorre. \vfill
+
+\begin{exampleblock}{Exemplos}
+$p =$ Está nublado.\\
+$q =$ Está chovendo.\\
+Ler-se $p \vee q$, como: ``Está nublado \structure{ou} está chovendo.''
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tabela-verdade para Disjunção}
+
+\begin{itemize}
+\item Se $p$ e $q$ são proposições, a expressão $p \vee q$ é chamada disjunção inclusiva de $p$ e $q$; e
+\item As proposições $p$ e $q$ são chamadas parcelas da expressão.
+\end{itemize} \vfill
+
+\begin{exampleblock}{Exemplos}
+\center
+\begin{tabular}{|c|c|c|}
+	\hline
+	\textbf{p} & \textbf{q} & \textbf{p $\vee$ q}\\ \hline
+	V & V & V \\ \hline
+	V & F & V \\ \hline
+	F & V & V \\ \hline
+	F & F & F \\ \hline
+\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operador Condicional}
+
+A característica peculiar dessa operação consiste em que um condicional $(p \rightarrow q)$ expressa que a ocorrência do fato expresso por $p$ garante necessariamente a ocorrência do fato expresso por $q$. \vfill
+
+\begin{exampleblock}{Exemplos}
+$p =$ Choveu.\\
+$q =$ Está molhado.\\
+Ler-se $p \rightarrow q$, como: ``\structure{Se} choveu, \structure{então} está molhado.''
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tabela-verdade para Condicional}
+
+\begin{itemize}
+\item Se $p$ e $q$ são proposições, a expressão $p \rightarrow q$ é chamada condicional de $p$ e $q$;
+\item A proposição $p$ é chamada antecedente, e a proposição $q$ consequente da condicional; e
+\item A operação de condicionamento indica que o acontecimento de $p$ é uma condição para que $q$ aconteça.
+\end{itemize} \vfill
+
+\begin{exampleblock}{Exemplos}
+\center
+\begin{tabular}{|c|c|c|}
+	\hline
+	\textbf{p} & \textbf{q} & \textbf{p $\rightarrow$ q}\\ \hline
+	V & V & V \\ \hline
+	V & F & F \\ \hline
+	F & V & V \\ \hline
+	F & F & V \\ \hline
+\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operador Bicondicional}
+
+A característica peculiar dessa operação consiste em que um bicondicional $(p \leftrightarrow q)$ assevera que os fatos expressos por $p$ e $q$ são interdependentes,
+isto é, ou os dois ocorrem juntos ou nenhum dos dois ocorrem.\vfill
+
+\begin{exampleblock}{Exemplos}
+$p =$ Será aprovado.\\
+$q =$ Estudar.\\
+Ler-se $p \leftrightarrow q$, como: ``Aprenderá, \structure{se e somente se} estudar''.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tabela-verdade para Bicondicional}
+
+\begin{itemize}
+\item Se $p$ e $q$ são proposições, a expressão $p \leftrightarrow q$ é chamada bicondicional de $p$ e $q$; e
+\item A operação de bicondicionamento indica que $p$ é uma condição para que $q$ aconteça, e vice-versa.
+\end{itemize} \vfill
+
+\begin{exampleblock}{Exemplos}
+\center
+\begin{tabular}{|c|c|c|}
+	\hline
+	\textbf{p} & \textbf{q} & \textbf{p $\leftrightarrow$ q}\\ \hline
+	V & V & V \\ \hline
+	V & F & F \\ \hline
+	F & V & F \\ \hline
+	F & F & V \\ \hline
+\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parênteses}
+
+A necessidade de usar parênteses na simbolização das proposições se deve ao fato de se evitar qualquer tipo de ambiguidade.\vfill
+
+\begin{exampleblock}{Exemplos}
+$p =$ Estudar.\\
+$q =$ Fazer a prova.\\
+$r =$ Fazer o trabalho.\\
+$s =$ Serei aprovado.\\
+Ler-se $((p \wedge q) \vee r) \rightarrow s$, como:\\
+``\structure{Se} ((estudar \structure{e} fazer a prova) \structure{ou} fazer o trabalho), \structure{então} será aprovado.''
+\end{exampleblock}
+\end{frame}
+
 
 \end{document}
