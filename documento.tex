@@ -523,4 +523,56 @@ Contingencia é toda a proposição composta que não é tautologia nem contradi
 \end{exampleblock}
 \end{frame}
 
+\section{Implicação e Equivalência Lógica}
+
+\begin{frame}
+\frametitle{Implicação Lógica}
+
+\begin{block}{Definição}
+A proposição $P(p, q,r, . . .)$ implica a proposição $Q(p, q,r, . . .)$, isto é:\\
+$P(p, q,r, . . .) \Rightarrow Q(p, q,r, . . .)$\\
+se e somente se a condicional:\\
+$P(p, q,r, . . .) \rightarrow Q(p, q,r, . . .)$
+é tautológica.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo: $(p \rightarrow q) \wedge p, q$}
+	\center
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		$p$ & $q$ &  $p \rightarrow q$ & $(p \rightarrow q) \wedge p$ & $((p \rightarrow q) \wedge p) \rightarrow q$ \\ \hline
+		V & V  & V & V &V\\ \hline
+		V & F  & F  & F & V\\ \hline
+        F & V  & V & F & V\\ \hline
+		F & F  & V  & F& V\\ \hline
+	\end{tabular}
+\end{exampleblock}\vfill
+
+\structure{Portanto, simbolicamente: $(p \rightarrow q) \wedge p \Rightarrow q$}
+\end{frame}
+
+\begin{frame}
+\frametitle{Equivalência Lógica}
+
+\begin{block}{Definição}
+A proposição $P(p, q,r, . . .)$ é equivalente à proposição $Q(p, q,r, . . .)$, isto é:\\
+$P(p, q,r, . . .) \Leftrightarrow Q(p, q,r, . . .)$\\
+se e somente se a bicondicional:\\
+$P(p, q,r, . . .) \leftrightarrow Q(p, q,r, . . .)$
+é tautológica.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo: $\neg p \rightarrow p, p$}
+	\center
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$p$ & $\neg p$ &  $\neg p \rightarrow p$ & $(\neg p \rightarrow p) \leftrightarrow p$  \\ \hline
+		V & F  & V & V \\ \hline
+		F & V  & F  & V \\ \hline
+	\end{tabular}
+\end{exampleblock}\vfill
+
+\structure{Portanto, simbolicamente: $\neg p \rightarrow p \Leftrightarrow p$}
+\end{frame}
+
 \end{document}
