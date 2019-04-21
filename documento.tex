@@ -575,4 +575,127 @@ $P(p, q,r, . . .) \leftrightarrow Q(p, q,r, . . .)$
 \structure{Portanto, simbolicamente: $\neg p \rightarrow p \Leftrightarrow p$}
 \end{frame}
 
+\section{Método Dedutivo}
+
+\begin{frame}
+\frametitle{Equivalência Lógica}
+
+\begin{block}{Definição}
+Dado um argumento $P_{1}, P_{2}, P_{3} \rightarrow Q$ chama-se demonstração ou dedução de $Q$ a partir das premissas $P_{1}, P_{2}, . . . P_{n}$, a sequência finita de
+proposições $X_{1}, X_{2}, . . . X_{m}$, tal que cada $X_{i}$ ou é uma premissa ou decorre logicamente de proposições anteriores da sequência, e de tal modo que a
+última proposição $X_{m}$ seja a conclusão $Q$ do argumento dado. Desta forma, se for possível obter a conclusão $Q$ através do procedimento de dedução, o argumento é válido, caso contrário, não é válido.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Álgebra das Proposições}
+
+\begin{itemize}
+	\item Propriedades da Conjunção;
+	\item Propriedades da Disjunção;
+	\item Propriedades da Conjunção e Disjunção; e
+	\item Negação da Condicional e Bicondicional.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Propriedades da Conjunção}
+
+\begin{block}{Idempotente}
+$p \wedge p \Leftrightarrow p$
+\end{block}\vfill
+
+\begin{block}{Comutativa}
+$p \wedge q \Leftrightarrow q \wedge p$
+\end{block}\vfill
+
+\begin{block}{Associativa}
+$(p \wedge q) \wedge r \Leftrightarrow p \wedge (q \wedge r)$
+\end{block}\vfill
+
+\begin{block}{Identidade}
+$p \wedge t \Leftrightarrow p$ e $p \wedge c \Leftrightarrow c$
+\end{block}\vfill
+
+\structure{Sejam $t$ e $c$ proposições também simples cujos valores lógicos respectivos são verdadeiro e falso.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Propriedades da Disjunção}
+
+\begin{block}{Idempotente}
+	$p \vee p \Leftrightarrow p$
+\end{block}\vfill
+
+\begin{block}{Comutativa}
+	$p \vee q \Leftrightarrow q \vee p$
+\end{block}\vfill
+
+\begin{block}{Associativa}
+	$(p \vee q) \vee r \Leftrightarrow p \vee (q \vee r)$
+\end{block}\vfill
+
+\begin{block}{Identidade}
+	$p \vee t \Leftrightarrow t$ e $p \vee c \Leftrightarrow p$
+\end{block}\vfill
+
+\structure{Sejam $t$ e $c$ proposições também simples cujos valores lógicos respectivos são verdadeiro e falso.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Propriedades da Conjunção e Disjunção}
+
+\begin{block}{Distributiva}
+$p \wedge (q \vee r) \Leftrightarrow (p \wedge q) \vee (p \wedge r)$ ou $p \vee (q \wedge r) \Leftrightarrow (p \vee q) \wedge (p \vee r)$
+\end{block}\vfill
+
+\begin{block}{Absorção}
+$p \wedge (p \vee q) \Leftrightarrow p$ ou $p \vee (p \wedge q) \Leftrightarrow p$
+\end{block}\vfill
+
+\begin{block}{Regras De Morgan}
+$\neg (p \wedge q) \Leftrightarrow \neg p \vee \neg q$ ou $\neg (p \vee q) \Leftrightarrow \neg p \wedge \neg q$
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Negação da Condicional e Bicondicional}
+
+\begin{block}{Condicional}
+$\neg (p \wedge q) \Leftrightarrow p \wedge \neg q$
+\end{block}\vfill
+
+\begin{block}{Bicondicional}
+$\neg (p \leftrightarrow q) \Leftrightarrow (p \wedge \neg q) \vee (\neg p \wedge q)$
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Demonstração da Implicação}
+
+\begin{exampleblock}{Exemplo: $p \wedge q \Rightarrow p$}
+$p \wedge  q \rightarrow p$\\
+$\neg (p \wedge q) \vee p$\\
+$(\neg p \vee \neg q) \vee p$ -- Comutativa\\
+$(\neg q \vee \neg p) \vee p$ -- Associativa\\
+$\neg q \vee (\neg p \vee p)$\\
+$\neg q \vee Tautologia$  -- Identidade\\
+$Tautologia$ \\
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Demonstração da Equivalência}
+
+\begin{exampleblock}{Exemplo: $p \rightarrow q \Leftrightarrow p \vee q \rightarrow q$}
+$p \vee q \rightarrow q$\\
+$\neg (p \vee q) \vee q$\\
+$(\neg p \wedge \neg q) \vee q$ -- Distributiva\\
+$(\neg p \vee q) \wedge (\neg q \vee q)$\\
+$(\neg p \vee q) \wedge Tautologia$ -- Identidade\\
+$(\neg p \vee q)$\\
+$p \rightarrow q$
+\end{exampleblock}
+\end{frame}
+
 \end{document}
