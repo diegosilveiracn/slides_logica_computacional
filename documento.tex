@@ -97,17 +97,17 @@ diego.nascimento@ifrn.edu.br
 A Lógica Formal repousa sobre três princípios fundamentais que permitem todo seu desenvolvimento posterior, e que dão validade a todos os atos do
 pensamento e do raciocínio.
 
-\begin{exampleblock}{Princípio da Identidade}
+\begin{block}{Princípio da Identidade}
 Afirma $A = A$ e não pode ser $B$, o que é, é.
-\end{exampleblock}\vfill
+\end{block}\vfill
 	
-\begin{exampleblock}{Princípio da Não Contradição}
+\begin{block}{Princípio da Não Contradição}
 $A = A$ e nunca pode ser não-$A$, o que é, é e não pode ser sua negação, ou seja, o ser é, o não ser não é.
-\end{exampleblock}\vfill
+\end{block}\vfill
 
-\begin{exampleblock}{Princípio do Terceiro Excluído}
+\begin{block}{Princípio do Terceiro Excluído}
 Afirma que Ou $A$ é $x$ ou $A$ é $y$, não existe uma terceira possibilidade.
-\end{exampleblock}
+\end{block}
 
 \end{frame}
 
@@ -850,12 +850,186 @@ $p \rightarrow q$
 \end{frame}
 
 \begin{frame}
-\frametitle{Demonstração de Regras de Inferência}
+\frametitle{Demonstração}
 
 	\begin{exampleblock}{Exemplo: $p \rightarrow q, p \wedge r  \vdash q$}
 		\large
 		$\frac{\begin{array}{ll} (1) p \rightarrow q & ~~~~\\ (2) p \wedge r ~~~~\end{array}}{\begin{array}{ll} (3) p & \structure{2 - SP}   \\ (4) q & \structure{1,3 - MP}\end{array}}$
 	\end{exampleblock}
+\end{frame}
+
+\section{Lógica de Predicados}
+
+\begin{frame}
+\frametitle{Termo e Predicado}
+
+\begin{itemize}
+	\item Na Lógica Proposicional as interpretações não dependem da estrutura interna de suas proposições, mas unicamente no modo como se combinam;
+	\item Já lógica de Predicados, dada uma proposição simples qualquer, pode destacar dela dois entes:
+	\begin{itemize}
+		\item \structure{Termo}; e
+		\item \structure{Predicado};
+	\end{itemize}
+	\item O termo pode ser entendido como o sujeito da sentença declarativa; e
+	\item O predicado é uma declaração a respeito do termo.
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo:}
+Sócrates é mortal\\
+\structure{Termo}: Sócrates\\
+\structure{Predicado}: é mortal
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Função Proposicional}
+
+\begin{itemize}
+	\item Seja $T$ um conjunto de termos, uma função proposicional em $T$ é um predicado $p$ associado a um termo $x$, $p(x)$;
+	\item A expressão $p(a)$ é verdadeira só e somente se $a \in T$; e
+	\item Nas funções proposicionais, os termos são variáveis, enquanto que as proposições são constantes.
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo:}
+Seja o conjunto $Z = \{1, 2, 3, 4, . . .\}$, são funções proposicionais:\\
+$par(x)$\\
+$primo(x)$
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Quantificadores}
+
+\begin{block}{Definição}
+São operadores lógicos que restringem as funções proposicionais, de forma que elas se refiram a todo um conjunto de termos $T$, ou parte dele.
+\end{block}\vfill
+
+\begin{itemize}
+	\item Universal: \structure{$\forall$}; e
+	\item Existencial: \structure{$\exists$}.
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo:}
+$\forall x(homem(x) \rightarrow mortal(x))$, ler-se: Todos os homens são mortais.\\
+$\exists x(homem(x) \wedge \neg atleta(x))$, ler-se: Existe homem que não é atleta.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Negação dos Quantificadores}
+
+\begin{columns}[c]
+	\large
+	\column{.4\textwidth}
+	\begin{block}{Universal}
+		$\neg \forall x(p(a)) \Leftrightarrow \exists x \neg (p(a))$
+	\end{block}
+	
+	\column{.4\textwidth}
+	\begin{block}{Existencial}
+		$\neg \exists x(p(a)) \Leftrightarrow \forall x \neg(p(a))$
+	\end{block}
+\end{columns}\vfill
+
+\begin{exampleblock}{Exemplo:}
+	\textbf{Não existe baleia que seja réptil}\\~\\
+	
+	$\neg \exists x(baleia(x) \wedge reptil(x))$ \\
+	$\forall x \neg(baleia(x) \wedge reptil(x))$ \\
+	$\forall x(\neg baleia(x) \vee \neg reptil(x))$ \\
+	$\forall x(baleia(x) \rightarrow \neg reptil(x))$ \\~\\
+	
+	\textbf{Todas as baleias não são répteis}.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Validade de Argumentos com Quantificadores}
+
+\begin{itemize}
+	\item É possível provar a validade de argumentos que envolva proposições quantificadas;
+	\item Para isso, é necessário transformar os argumentos com quantificadores em argumentos não quantificados, por meio de \structure{exemplificações};
+	\item Em seguida, aplicar as regras de inferências lógicas já estudadas; e
+	\item Por fim, uma vez concluída a prova de validade do argumento, usa-se a \structure{generalização} para obter a conclusão do argumento quantificado.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Exemplificação Existencial}
+
+\begin{block}{Definição}
+Dado um conjunto de termos $T$ e um predicado qualquer $p$. Se existe um termo associado ao predicado $p$, estipulamos que tal termo seja $c$.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\Large
+	$\frac{\exists x (p(x))}{p(c)}$
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Exemplificação Universal}
+
+\begin{block}{Definição}
+Dado um conjunto de termos $T$ e um predicado qualquer $p$. Se todos os termos são associado ao predicado $p$, escolhemos um deles, $c$, um termo
+constante.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\Large
+	$\frac{\forall x (p(x))}{p(c)}$
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Generalização Existencial}
+
+\begin{block}{Definição}
+Dado um conjunto de termos $T$ e um predicado qualquer $p$. Se concluímos que um termo $c$ constante está associado ao predicado $p$, então existe um
+termo associado a $p$.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\Large
+	$\frac{p(c)}{ \exists x p(x)}$
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Generalização Universal}
+
+\begin{block}{Definição}
+Dado um conjunto de termos $T$ e um predicado qualquer $p$. Se o termo $c$ tomado na exemplificação pode ser qualquer um, ou seja, pode ser tomado
+aleatoriamente, então qualquer termo está associado ao predicado $p$.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\Large
+		$\frac{p(c)}{ \forall x p(x)}$
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Demonstração}
+
+\begin{exampleblock}{Exemplo}
+	\textbf{Todos os jogadores são atletas.}\\
+	\textbf{Todos os atletas sofrem contusões.}\\
+	\textbf{Logo, todos os jogadores sofrem contusões.}\\~\\
+
+	$\frac{
+		     \begin{array}{ll} 
+			(1) \forall x (jogador(x) \rightarrow atleta(x)) &~~~~~~~~~~~~~~~~~\\ 
+			(2) \forall x (atleta(x) \rightarrow contusao(x)) &
+			\end{array}
+		    }{
+		    \begin{array}{ll} 
+		    (3) jogador(Zico) \rightarrow atleta(Zico) & \structure{1 - EU}  \\ 
+		    (4)  Atleta(Zico) \rightarrow contusao(Zico) & \structure{2 - EU}  \\ 
+		    (5)  jogador(Zico) \rightarrow contusao(Zico)& \structure{3,4 - SH}  \\ 
+		    (6)  \forall x(jogador(x) \rightarrow contusao(x)) & \structure{5 - GU}
+		   \end{array}}$
+\end{exampleblock}
 \end{frame}
 
 \end{document}
