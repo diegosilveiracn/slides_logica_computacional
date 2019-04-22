@@ -698,4 +698,144 @@ $p \rightarrow q$
 \end{exampleblock}
 \end{frame}
 
+\section{Inferência Lógica}
+
+\begin{frame}
+\frametitle{Inferência}
+
+\begin{block}{Definição}
+É o processo pelo qual se chega a uma proposição, firmada na base de uma ou outras mais proposições aceitas como ponto de partida do processo.
+\end{block}\vfill
+
+\begin{itemize}
+	\item Regra de Adição (AD);
+	\item Regra de Simplificação (SIMP);
+	\item Regra da Conjunção (CONJ);
+	\item Regra de Absorção (ABS);
+	\item Regra Modus ponens (MP);
+	\item Regra Modus tollens (MT);
+	\item Regra do Silogismo disjuntivo (SD);
+	\item Regra do Silogismo hipotético (SH);
+	\item Regra do Dilema construtivo (DC); e
+	\item Regra do Dilema destrutivo (DD).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regras de Inferência}
+
+\begin{columns}[c]
+	\large
+	\column{.4\textwidth}
+	\begin{block}{Adição}
+	   \begin{equation*}
+	   	\frac{\begin{array}{ll}p  & ~~ \end{array}}{p \vee q}
+	   \end{equation*}
+ 	\end{block}
+	
+	\column{.4\textwidth}
+\begin{block}{Simplificação}
+	\large
+	\begin{equation*}
+	\frac{p \wedge q}{p}
+	\end{equation*}	
+\end{block}
+
+\end{columns}\vfill
+
+\begin{columns}[c]
+	\large
+	\column{.4\textwidth}
+	\begin{block}{Conjunção}
+		\begin{equation*}
+	\frac{\begin{array}{ll} p & ~~ \\ q & ~~\end{array}}{p \wedge q}
+		\end{equation*}
+	\end{block}
+	
+	\column{.4\textwidth}
+\begin{block}{Absorção}
+	\large
+	\begin{equation*}
+	\frac{\begin{array}{ll}p \rightarrow q & ~~~~\end{array}}{p \rightarrow (p \wedge q)}
+	\end{equation*}
+\end{block}	
+	
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Regras de Inferência}
+
+	\begin{columns}[c]
+	\large
+	\column{.4\textwidth}
+\begin{block}{Modus Ponens}
+	\large
+	\begin{equation*}
+	\frac{\begin{array}{l} p \rightarrow q \\ p\end{array}}{q}
+	\end{equation*}
+\end{block}	
+
+	\column{.4\textwidth}
+\begin{block}{ Modus Tollens}
+	\large
+	\begin{equation*}
+	\frac{\begin{array}{l} p \rightarrow q \\ \neg q\end{array}}{\neg p}
+	\end{equation*}
+\end{block}	
+\end{columns}\vfill
+
+	\begin{columns}[c]
+	\large
+	\column{.4\textwidth}
+	\begin{block}{Silogismo Disjuntivo}
+		\large
+		\begin{equation*}
+	\frac{\begin{array}{ll} p \vee q & \\ \neg q & ~~\end{array}}{p}	
+		\end{equation*}
+	\end{block}
+	
+	\column{.4\textwidth}
+	\begin{block}{Silogismo Hipotético}
+		\large
+		\begin{equation*}
+	\frac{\begin{array}{l} p \rightarrow q \\ q \rightarrow r \end{array}}{p \rightarrow r}	
+		\end{equation*}
+	\end{block}	
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regras de Inferência}
+
+\begin{columns}[c]
+	\large
+	\column{.4\textwidth}
+	\begin{block}{Dilema Construtivo}
+		\large
+		\begin{equation*}
+		\frac{\begin{array}{l} p \rightarrow q \\ r \rightarrow s \\ p \vee r \end{array}}{q \vee s}
+		\end{equation*}
+	\end{block}	
+	
+	\column{.4\textwidth}
+	\begin{block}{Dilema Destrutivo}
+		\large
+		\begin{equation*}
+		\frac{\begin{array}{l} p \rightarrow q \\ r \rightarrow s \\ \neg q \vee \neg s \end{array}}{\neg p \vee \neg r}
+		\end{equation*}
+	\end{block}	
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Demonstração de Regras de Inferência}
+
+	\begin{exampleblock}{Exemplo: $p \rightarrow q, p \wedge r  \vdash q$}
+		\large
+		$\frac{\begin{array}{ll} (1) p \rightarrow q & ~~~~\\ (2) p \wedge r ~~~~\end{array}}{\begin{array}{ll} (3) p & \structure{2 - SP}   \\ (4) q & \structure{1,3 - MP}\end{array}}$
+	\end{exampleblock}
+\end{frame}
+
 \end{document}
