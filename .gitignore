@@ -1,3 +1,6 @@
+## Ignorando arquivos temporários do Mac OS X
+.DS_Store
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
